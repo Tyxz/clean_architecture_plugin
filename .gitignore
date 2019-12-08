@@ -19,6 +19,9 @@
 .gradle
 .gradle/*
 
+# Publish Token
+#gradle.properties
+
 build/
 build/*
 
