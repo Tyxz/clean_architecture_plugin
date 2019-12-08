@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="de.tyxar.clean_architecture_plugin.ui.FeatureDialog">
-  <grid id="27dc6" binding="contentPanel" layout-manager="GridLayoutManager" row-count="5" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="contentPanel" layout-manager="GridLayoutManager" row-count="6" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="8" left="8" bottom="8" right="8"/>
     <constraints>
       <xy x="20" y="20" width="500" height="400"/>
@@ -25,6 +25,15 @@
         <properties>
           <text value="Feature name"/>
           <toolTipText value="Blank or empty entry will create architecture in current directory"/>
+        </properties>
+      </component>
+      <component id="1e5cc" class="javax.swing.JCheckBox" binding="splitDataSource">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Split data_sources to local and remote"/>
+          <toolTipText value="Check if you want the data-&gt;data_source folder to be split for local and remote"/>
         </properties>
       </component>
     </children>

@@ -50,6 +50,10 @@ tasks.getByName<org.jetbrains.intellij.tasks.PatchPluginXmlTask>("patchPluginXml
             <ul>
                 <li>Update to work with Android Studio</li>
             </ul>
+            <h4>v1.0.2</h4>
+            <ul>
+                <li>Added checkbox to dialog to split data sources to local and remote</li>
+            </ul>
        """
     )
 }

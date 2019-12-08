@@ -13,6 +13,7 @@ It is inspired by @ResoCoder [Clean Architecture for Flutter Course](https://git
 - Right click on or anywhere in your destination folder
 - New -> Clean Generator -> Flutter
 - Enter [feature_name] in the dialog or let it be empty to create structure in current directory
+- Optional: Use the checkbox to split the data_sources folder into local and remote
 
 Right-click |  Enter [feature_name] | generated  
 ------------ | ------------- | -------------
@@ -21,8 +22,17 @@ Right-click |  Enter [feature_name] | generated
 ## What will be created
 - [feature_name]
   - data
-    - data_sources
-    - models
+    - [Two variants]
+        - [Checkbox checked]
+            - local
+                - data_sources
+                - models
+            - remote
+                - data_sources
+                - models
+        - [Checkbox unchecked]
+            - data_sources
+            - models        
     - repositories
   - domain
     - entities
