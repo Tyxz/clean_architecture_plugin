@@ -1,0 +1,7 @@
+<component name="CopyrightManager">
+  <copyright>
+    <option name="allowReplaceRegexp" value="\* Last Edited" />
+    <option name="notice" value="Copyright: Copyright (c) &amp;#36;today.year Arne Rantzen &lt;arne@rantzen.net&gt;&#10;License: GPL-3&#10;Last Edited: &amp;#36;today" />
+    <option name="myName" value="GPL" />
+  </copyright>
+</component>

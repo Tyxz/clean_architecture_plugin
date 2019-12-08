@@ -1,0 +1,31 @@
+<idea-plugin>
+    <id>de.tyxar.clean_architecture_plugin</id>
+    <name>Clean Architecture for Flutter</name>
+    <vendor email="arne@rantzen.net" url="http://rantzen.net">Tyx</vendor>
+
+    <description><![CDATA[
+    Adds a generator to the <em>New</em> context menu to create the Clean-Architecture folder structure for a given feature.
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <actions>
+        <group
+                description="Choose a Clean-Architecture variant"
+                popup="true"
+                id="de.tyxar.clean_architecture_plugin"
+                class="de.tyxar.clean_architecture_plugin.action.ActionGroup"
+                text="Clean Generator">
+            <add-to-group
+                    group-id="NewGroup"
+                    relative-to-action="NewDir"
+                    anchor="after"/>
+            <action class="de.tyxar.clean_architecture_plugin.action.ActionGenerateFlutter"
+                    description="Generate a new Clean-Architecture for Flutter"
+                    id="de.tyxar.clean_architecture_plugin.action.ActionGenerateFlutter"
+                    text="Flutter"/>
+        </group>
+    </actions>
+</idea-plugin>
