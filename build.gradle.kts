@@ -42,11 +42,11 @@ tasks {
 tasks.getByName<org.jetbrains.intellij.tasks.PatchPluginXmlTask>("patchPluginXml") {
     changeNotes(
         """
-            <h1>v1.0.0</h1>
+            <h2>v1.0.0</h2>
             <ul>
                 <li>Initial release</li>
             </ul>
-            <h3>v1.0.1</h3>
+            <h4>v1.0.1</h4>
             <ul>
                 <li>Update to work with Android Studio</li>
             </ul>
