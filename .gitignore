@@ -20,7 +20,7 @@
 .gradle/*
 
 # Publish Token
-#gradle.properties
+gradle.properties
 
 build/
 build/*

@@ -7,6 +7,9 @@
     Adds a generator to the <em>New</em> context menu to create the Clean-Architecture folder structure for a given feature.
     ]]></description>
 
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="192.6262.58"/>
+
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
     <depends>com.intellij.modules.platform</depends>

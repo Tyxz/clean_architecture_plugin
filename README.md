@@ -2,9 +2,10 @@
 
 Generate the Clean-Architecture directory structure from Robert C. Martin (Uncle Bob) in your flutter projects. 
 It is inspired by @ResoCoder [Clean Architecture for Flutter Course](https://github.com/ResoCoder/flutter-tdd-clean-architecture-course). 
+
 ## How To Install
-- ~~Android Studio / IntelliJ IDEA -> Plugins -> Browse repositories~~
-- ~~Search: Clean Architecture for Flutter~~
+- Android Studio / IntelliJ IDEA -> Plugins -> Browse repositories
+- Search: Clean Architecture for Flutter
 - Install
 - Restart IDE
 
@@ -12,6 +13,10 @@ It is inspired by @ResoCoder [Clean Architecture for Flutter Course](https://git
 - Right click on or anywhere in your destination folder
 - New -> Clean Generator -> Flutter
 - Enter [feature_name] in the dialog or let it be empty to create structure in current directory
+
+Right-click |  Enter [feature_name] | generated  
+------------ | ------------- | -------------
+![context menu](/assets/clean_architecture_plugin_1.jpeg) | ![context menu](/assets/clean_architecture_plugin_2.jpeg) | ![context menu](/assets/clean_architecture_plugin_3.jpeg)
 
 ## What will be created
 - [feature_name]
