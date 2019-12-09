@@ -54,6 +54,11 @@ tasks.getByName<org.jetbrains.intellij.tasks.PatchPluginXmlTask>("patchPluginXml
             <ul>
                 <li>Added checkbox to dialog to split data sources to local and remote</li>
             </ul>
+            <h4>v1.1.0</h4>
+            <ul>
+                <li>Changed code for backward compatibility</li>
+                <li>Removed Either type to work with current Android Studio</li>
+            </ul>
        """
     )
 }
@@ -65,9 +70,11 @@ version = pluginVersion
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
     pluginName = pluginName
-    type = "IU"
     version = ideaVersion
+    type = "IC"
+    alternativeIdePath = "/opt/android-studio"
     updateSinceUntilBuild = false
+    setPlugins("android")
 }
 
 val publishPlugin: PublishTask by tasks

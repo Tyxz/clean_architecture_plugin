@@ -8,23 +8,19 @@
     ]]></description>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-    <idea-version since-build="192.6262.58"/>
+    <idea-version since-build="191.8026.42" />
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
     <depends>com.intellij.modules.platform</depends>
 
     <actions>
-        <group
+        <group class="de.tyxar.clean_architecture_plugin.action.ActionGroup"
                 description="Choose a Clean-Architecture variant"
-                popup="true"
-                id="de.tyxar.clean_architecture_plugin"
-                class="de.tyxar.clean_architecture_plugin.action.ActionGroup"
+                id="de.tyxar.clean_architecture_plugin" popup="true"
                 text="Clean Generator">
-            <add-to-group
-                    group-id="NewGroup"
-                    relative-to-action="NewDir"
-                    anchor="after"/>
+            <add-to-group anchor="after"
+                    group-id="NewGroup" relative-to-action="NewDir" />
             <action class="de.tyxar.clean_architecture_plugin.action.ActionGenerateFlutter"
                     description="Generate a new Clean-Architecture for Flutter"
                     id="de.tyxar.clean_architecture_plugin.action.ActionGenerateFlutter"

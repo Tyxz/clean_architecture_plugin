@@ -8,6 +8,7 @@ package de.tyxar.clean_architecture_plugin.action
 
 import com.intellij.openapi.actionSystem.*
 import com.intellij.openapi.command.WriteCommandAction
+import com.intellij.openapi.vfs.VirtualFile
 import de.tyxar.clean_architecture_plugin.generator.Generator
 import de.tyxar.clean_architecture_plugin.ui.FeatureDialog
 
@@ -40,25 +41,23 @@ class ActionGenerateFlutter : AnAction() {
             if (root != null && root.isNotBlank()) {
                 val result = Generator.createFolder(
                     project, folder, root
-                )
-                if (result.isLeft) return@runWriteCommandAction
-                folder = result.right[root]
+                ) ?: return@runWriteCommandAction
+                folder = result[root]
             }
             if (splitSource != null && splitSource) {
-                var mapOrFalse = Generator.createFolder(
+                val mapOrFalse = Generator.createFolder(
                     project, folder,
                     "data",
                     "repositories"
-                )
-                if (mapOrFalse.isLeft) return@runWriteCommandAction
-                mapOrFalse.right["data"]?.let {
+                ) ?: return@runWriteCommandAction
+                mapOrFalse["data"]?.let { data: VirtualFile ->
                     Generator.createFolder(
-                        project, it,
+                        project, data,
                         "local",
                         "models", "data_sources"
                     )
                     Generator.createFolder(
-                        project, it,
+                        project, data,
                         "remote",
                         "models", "data_sources"
                     )
